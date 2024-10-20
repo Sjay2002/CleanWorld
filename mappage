@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Waste Management Campaign Map</title>
   
-  <!-- Leaflet CSS -->
+  
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   
-  <!-- Icons -->
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <style>
@@ -32,9 +32,9 @@
 
     nav {
       display: flex;
-      justify-content: space-around;
+      justify-content: flex-end;
       background-color: #3F8041;
-      padding: 10px 0;
+      padding: 5px 0;
     }
 
     nav a {
@@ -104,11 +104,6 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    Clean World Campaign Map
-  </header>
-
   <!-- Navigation Bar -->
   <nav>
     <a href="index.html"><i class="fas fa-home"></i> Home</a>
@@ -116,7 +111,9 @@
     <a href="collabaration.html"><i class="fas fa-users"></i> Collaboration</a>
     <a href="mappage.html"><i class="fas fa-user-circle"></i> Map</a>
   </nav>
-
+  <header>
+    Clean World Campaign Map
+  </header>
   <!-- Note for Map Section -->
   <div class="map-note">
     <strong>Note:</strong> Green markers indicate upcoming campaigns, and blue markers indicate past campaigns.
