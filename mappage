@@ -15,12 +15,12 @@
     /* Styling for header, navigation bar, and footer */
     body {
       margin: 0;
-      font-family:Arial Black;
+      font-family:'Arial', sans-serif;
       background-color: #f4f4f4;
     }
 
     header {
-      background-color:#00e579;
+      background-color:#083C16;
       padding: 1rem;
       text-align: center;
       color: white;
@@ -33,7 +33,7 @@
     nav {
       display: flex;
       justify-content: space-around;
-      background-color: #0f6d41;
+      background-color: #3F8041;
       padding: 10px 0;
     }
 
@@ -51,7 +51,7 @@
     }
 
     nav a:hover {
-      background-color: #00e579;
+      background-color: #083C16;
       border-radius: 5px;
       transition: background-color 0.3s;
     }
@@ -66,12 +66,12 @@
       text-align: center;
       padding-top: 12px;
       font-size: 16px;
-      color: #037c43;
+      color: #083C16;
       margin-bottom: 10px;
     }
 
     footer {
-      background-color: #0f6d41;
+      background-color:  #083C16;
       color: white;
       text-align: center;
       padding: 1rem 0;
@@ -88,7 +88,7 @@
 
     footer p i {
       /* padding-top: 20px; */
-      color: #4CAF50;
+      color: #083C16;
     }
 
     @media (max-width: 768px) {
