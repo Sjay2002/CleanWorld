@@ -111,10 +111,10 @@
 
   <!-- Navigation Bar -->
   <nav>
-    <a href="#"><i class="fas fa-home"></i> Home</a>
-    <a href="#"><i class="fas fa-calendar-plus"></i> Organize Campaign</a>
-    <a href="#"><i class="fas fa-users"></i> Attend Campaign</a>
-    <a href="#"><i class="fas fa-user-circle"></i> Profile</a>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="events.html"><i class="fas fa-calendar-plus"></i> Events</a>
+    <a href="collabaration.html"><i class="fas fa-users"></i> Collaboration</a>
+    <a href="mappage.html"><i class="fas fa-user-circle"></i> Map</a>
   </nav>
 
   <!-- Note for Map Section -->
