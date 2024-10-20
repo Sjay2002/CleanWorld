@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waste Management Campaign Map</title>
+  
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    /* Styling for header, navigation bar, and footer */
+    body {
+      margin: 0;
+      font-family:'Arial', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color:#083C16;
+      padding: 1rem;
+      text-align: center;
+      color: white;
+      font-size: 24px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #3F8041;
+      padding: 5px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
+
+    nav a i {
+      margin-right: 8px;
+    }
+
+    nav a:hover {
+      background-color: #083C16;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    #map {
+      height: 440px;
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    .map-note {
+      text-align: center;
+      padding-top: 12px;
+      font-size: 16px;
+      color: #083C16;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color:  #083C16;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer p {
+      padding-top: 12px;
+      margin: 0;
+      font-size: 14px;
+    }
+
+    footer p i {
+      /* padding-top: 20px; */
+      color: #083C16;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      nav a {
+        font-size: 16px;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <a href="events.html"><i class="fas fa-calendar-plus"></i> Events</a>
+    <a href="collabaration.html"><i class="fas fa-users"></i> Collaboration</a>
+    <a href="mappage.html"><i class="fas fa-user-circle"></i> Map</a>
+  </nav>
+  <header>
+    Clean World Campaign Map
+  </header>
+  <!-- Note for Map Section -->
+  <div class="map-note">
+    <strong>Note:</strong> Green markers indicate upcoming campaigns, and blue markers indicate past campaigns.
+  </div>
+
+  <!-- Map Section -->
+  <div id="map"></div>
+
+  <!-- Footer -->
+  <footer>
+    <p>For any inquiries, contact us at: <i class="fas fa-phone"></i> +94 123 456 789 | <i class="fas fa-envelope"></i> info@wastemanagement.com</p>
+    <p>&copy; 2024 Waste Management Campaign</p>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initializing the map
+    var map = L.map('map').setView([7.8731, 80.7718], 7); // Set to Sri Lanka's coordinates (default)
+
+    // Adding OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Placeholder data for past and upcoming campaigns
+    var campaignData = [
+      { type: 'past', location: [6.9271, 79.8612], description: 'Colombo Cleanup Campaign', date: 'March 1, 2024' },
+      { type: 'upcoming', location: [6.0535, 80.2210], description: 'Galle Beach Cleanup', date: 'April 10, 2024' },
+      { type: 'upcoming', location: [7.2906, 80.6337], description: 'Kandy Park Cleanup', date: 'May 5, 2024' }
+    ];
+
+    // Function to add markers to the map
+    campaignData.forEach(function (campaign) {
+      var markerColor = campaign.type === 'past' ? 'blue' : 'green';
+      var marker = L.circleMarker(campaign.location, {
+        color: markerColor,
+        radius: 8
+      }).addTo(map);
+
+      marker.bindPopup(`
+        <strong>${campaign.description}</strong><br>
+        <em>${campaign.type.charAt(0).toUpperCase() + campaign.type.slice(1)} Campaign</em><br>
+        <strong>Date:</strong> ${campaign.date}
+      `);
+    });
+
+  </script>
+</body>
+</html>
