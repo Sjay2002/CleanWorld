@@ -1,11 +1,10 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collaborations Page</title>
     <style>
-        /* General reset and styling */
         * {
             margin: 0;
             padding: 0;
@@ -14,64 +13,57 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #46c967;
-            color: #333;
+            background-color: #083C16;
+            color: white;
             margin: 0;
             padding: 0;
         }
 
-        /* Container styling */
         .container {
             width: 100vw;
             margin: 0;
-            padding: 20px;
-            background-color: #a2e4b5;
+            padding: 0px;
+            background-color: #3F8041;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
             border-radius: 10px;
         }
 
-        /* Header section */
-        .header {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #e0e0e0;
-        }
+        
 
-        .header h1 {
-            margin: 0;
-            color: #388e3c;
-            font-size: 32px;
-            font-weight: bold;
-        }
+        nav {
+      display: flex;
+      justify-content: flex-end;
+      background-color: #0f6d41;
+      padding: 10px 0;
+    }
 
-        /* Navigation bar styling */
-        .nav {
-            display: flex;
-            justify-content: center;
-            background-color: #2e7d32;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 55px;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+    }
 
-        .nav a {
-            margin: 0 20px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            padding: 10px;
-            transition: all 0.3s ease;
-        }
+    nav a i {
+      margin-right: 8px;
+    }
+
+    nav a:hover {
+      background-color: #00e579;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
 
         .nav a:hover {
-            background-color: #1b5e20;
+            background-color: #3F8041;
             padding: 10px 15px;
             border-radius: 5px;
         }
 
-        /* Section title styling */
         .section-title {
-            background-color: #388e3c;
+            background-color: #083C16;
             color: white;
             padding: 15px;
             font-size: 22px;
@@ -84,11 +76,10 @@
             text-align: center;
             margin: 15px 0 20px;
             font-size: 16px;
-            color: #666;
+            color: #ccc;
             line-height: 1.5;
         }
 
-        /* Table styling */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -96,7 +87,7 @@
         }
 
         table, th, td {
-            border: 2px solid #09c960;
+            border: 2px solid white;
         }
 
         th, td {
@@ -105,19 +96,18 @@
         }
 
         th {
-            background-color: #388e3c;
-            color: rgb(249, 243, 243);
+            background-color: #083C16;
+            color: white;
             font-size: 16px;
         }
 
         td {
-            background-color: #c0edc6;
-            color: #333;
+            background-color: #3F8041;
+            color: white;
         }
 
-        /* Earned points box */
         .earned-points {
-            background-color: #81c784;
+            background-color: #3F8041;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 30px;
@@ -134,9 +124,8 @@
             font-size: 22px;
         }
 
-        /* Action boxes */
         .action-box {
-            background-color: #c8e6c9;
+            background-color: #3F8041;
             padding: 20px;
             border-radius: 10px;
             margin-bottom: 30px;
@@ -148,7 +137,7 @@
         }
 
         .action-box button {
-            background-color: #4caf50;
+            background-color: #083C16;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -158,10 +147,9 @@
         }
 
         .action-box button:hover {
-            background-color: #388e3c;
+            background-color: hsl(139, 70%, 56%);
         }
 
-        /* Image gallery */
         .image-container {
             display: flex;
             justify-content: space-around;
@@ -180,7 +168,10 @@
             transform: scale(1.05);
         }
 
-        /* Responsive design for smaller screens */
+        .red-text {
+            color: red;
+        }
+
         @media (max-width: 768px) {
             .nav {
                 flex-direction: column;
@@ -208,16 +199,14 @@
 <body>
 
     <div class="container">
-        <div class="header">
-            <h1>My Collaborations</h1>
-        </div>
+        
 
-        <div class="nav">
-            <a href="#">Home</a>
-            <a href="#">Events</a>
-            <a href="#">Collaborations</a>
-            <a href="#">Map</a>
-        </div>
+        <nav>
+            <a href="index.html"><i class="fas fa-home"></i> Home</a>
+            <a href="events.html"><i class="fas fa-calendar-plus"></i> Events</a>
+            <a href="collabaration.html"><i class="fas fa-users"></i> Collaboration</a>
+            <a href="mappage.html"><i class="fas fa-user-circle"></i> Map</a>
+          </nav>
 
         <div class="section">
             <div class="section-title">My Collaborations</div>
@@ -279,7 +268,7 @@
         </div>
 
         <div class="section">
-            <div class="section-title">Report New Garbage [+5 Points]</div>
+            <div class="section-title">Report New Garbage <span class="red-text">[+5 Points]</span></div>
             <p class="description">
                 Help keep our community clean by reporting garbage in your area! Use this section to quickly submit 
                 sightings of litter or waste, ensuring prompt action and cleanup.
@@ -295,7 +284,7 @@
         </div>
 
         <div class="section">
-            <div class="section-title">Organize Event [+10 Points]</div>
+            <div class="section-title">Organize Event <span class="red-text">[+10 Points]</span></div>
             <p class="description">
                 Create a new cleanup event in your local area to gather volunteers and take direct action. Organizing events
                 gives you more points and helps build a cleaner, greener community.
